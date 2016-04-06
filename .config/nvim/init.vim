@@ -1,3 +1,4 @@
+" Install plugins by command :PlugInstall
 call plug#begin('~/.config/nvim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
