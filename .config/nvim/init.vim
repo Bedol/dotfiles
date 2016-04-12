@@ -1,3 +1,4 @@
+" Config require neovim 0.1.3
 " Install plugins by command :PlugInstall
 call plug#begin('~/.config/nvim/plugged')
     Plug 'easymotion/vim-easymotion'
@@ -18,13 +19,17 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'raimondi/delimitmate'
     Plug 'flazz/vim-colorschemes'
     Plug 'edkolev/tmuxline.vim'
+    Plug 'simnalamburt/vim-mundo'
+    Plug 'tpope/vim-bundler'
+    Plug 'ervandew/supertab'
+    Plug 'unblevable/quick-scope'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
 
 " Basic configuration
 set encoding=utf-8
-colorscheme molokai
+colorscheme badwolf
 set history=1000
 let g:molokai_original = 1
 syntax enable
@@ -74,3 +79,16 @@ let g:ag_highlight=1
 
 " Vim-ruby config
 let g:ruby_indent_access_modifier_style = 'outdent'
+
+" Vim-Mundo config (fork Gundo for neovim) - WARNING: don't work with neovim 0.1.2
+nnoremap <leader>u :MundoToggle<CR>
+set undofile
+set undodir=~/.config/nvim/undo
+
+" Syntastic config
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+highlight SyntasticError guibg=#2f0000
