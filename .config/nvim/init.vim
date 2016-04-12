@@ -94,3 +94,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 highlight SyntasticError guibg=#2f0000
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'rw'
