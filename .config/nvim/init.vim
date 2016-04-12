@@ -73,6 +73,8 @@ let g:NERDTreeIndicatorMapCustom = {
 " Vim-Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='badwolf'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Ag configuration
 let g:ag_highlight=1
