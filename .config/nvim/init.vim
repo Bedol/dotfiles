@@ -73,6 +73,7 @@ nnoremap <silent><C-s> :w<CR>
 nnoremap <silent><Leader>pi :PlugInstall<CR>
 nnoremap <silent><Leader>pc :PlugClear<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
+nnoremap <silent><Leader>qq :q<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
