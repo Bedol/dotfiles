@@ -15,11 +15,10 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'scrooloose/syntastic'
     Plug 'vim-ruby/vim-ruby'
     Plug 'tpope/vim-endwise'
-    Plug 'nathanaelkane/vim-indent-guides'
     Plug 'raimondi/delimitmate'
     Plug 'flazz/vim-colorschemes'
     Plug 'edkolev/tmuxline.vim'
-    Plug 'simnalamburt/vim-mundo'
+    Plug 'simnalamburt/vim-mundo', { 'on': 'MundoToggle' }
     Plug 'tpope/vim-bundler'
     Plug 'ervandew/supertab'
     Plug 'unblevable/quick-scope'
@@ -27,18 +26,20 @@ call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
 
+syntax enable
+colorscheme badwolf
+
 " Basic configuration
 set encoding=utf-8
-colorscheme badwolf
 set history=1000
 let g:molokai_original = 1
-syntax enable
 set cursorline
 set wildmenu
 set showmatch
 set ruler
 set hlsearch
 set showcmd
+set number
 set relativenumber
 set autoindent
 set shiftwidth=2
@@ -46,10 +47,16 @@ set smartindent
 set smarttab
 set softtabstop=2
 set expandtab
-inoremap jk <ESC>
 
+" quick esc
+inoremap jk <ESC>
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+" Map ,/ to hide highlight
+nnoremap <silent><Leader>/ :nohls<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
@@ -93,6 +100,8 @@ let g:syntastic_check_on_wq = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_error_symbol = "✗" 
+let g:syntastic_warning_symbol = "⚠"
 highlight SyntasticError guibg=#2f0000
 
 " CtrlP
