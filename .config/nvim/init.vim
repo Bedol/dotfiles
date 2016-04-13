@@ -22,17 +22,19 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-bundler'
     Plug 'ervandew/supertab'
     Plug 'unblevable/quick-scope'
+    Plug 'christophermca/meta5'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
 
 syntax enable
+set background=dark
 colorscheme badwolf
+let g:molokai_original = 1
 
 " Basic configuration
 set encoding=utf-8
 set history=1000
-let g:molokai_original = 1
 set cursorline
 set wildmenu
 set showmatch
@@ -55,8 +57,22 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-" Map ,/ to hide highlight
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
 nnoremap <silent><Leader>/ :nohls<CR>
+nnoremap <silent><C-s> :w<CR>
+nnoremap <silent><Leader>pi :PlugInstall<CR>
+nnoremap <silent><Leader>pc :PlugClear<CR>
+nnoremap <silent><Leader>gs :Gstatus<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
@@ -85,6 +101,8 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Ag configuration
 let g:ag_highlight=1
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 
 " Vim-ruby config
 let g:ruby_indent_access_modifier_style = 'outdent'
