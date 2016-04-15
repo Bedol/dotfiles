@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-rails'
     Plug 'wikitopian/hardmode'
     Plug 'thoughtbot/vim-rspec'
+    Plug 'mattn/emmet-vim'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
@@ -79,8 +80,9 @@ nnoremap <silent><Leader>pc :PlugClear<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
 nnoremap <silent><Leader>qq :q<CR>
 nnoremap <silent><Leader>wq :wq<CR>
-nnoremap <silent><Leader>evrc :e ~/.config/nvim/init.vim<CR>
-nnoremap <silent><Leader>svrc :source ~/.config/nvim/init.vim<CR>
+
+" open neovim config
+nnoremap <silent><Leader>evrc :e ~/projects/dotfiles/.config/nvim/init.vim<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
