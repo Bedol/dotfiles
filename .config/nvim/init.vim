@@ -79,6 +79,8 @@ nnoremap <silent><Leader>pc :PlugClear<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
 nnoremap <silent><Leader>qq :q<CR>
 nnoremap <silent><Leader>wq :wq<CR>
+nnoremap <silent><Leader>evrc :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent><Leader>svrc :source ~/.config/nvim/init.vim<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
@@ -123,7 +125,7 @@ let g:syntastic_check_on_wq = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_error_symbol = "✗" 
+let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 highlight SyntasticError guibg=#2f0000
 
@@ -138,7 +140,9 @@ set wildignore+=*.swp,*~,._*,*/tmp/*,.DS_Store
 
 " RSpec.vim mappings
 let g:rspec_runner = "os_x_iterm2"
+
 map <Leader>rt :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
+
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
