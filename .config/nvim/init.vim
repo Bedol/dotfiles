@@ -23,6 +23,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ervandew/supertab'
     Plug 'unblevable/quick-scope'
     Plug 'christophermca/meta5'
+    Plug 'tpope/vim-rails'
+    Plug 'wikitopian/hardmode'
+    Plug 'thoughtbot/vim-rspec'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
@@ -44,11 +47,12 @@ set showcmd
 set number
 set relativenumber
 set autoindent
-set shiftwidth=2
 set smartindent
 set smarttab
+set shiftwidth=2
 set softtabstop=2
 set expandtab
+set tabstop=2
 
 " quick esc
 inoremap jk <ESC>
@@ -74,6 +78,7 @@ nnoremap <silent><Leader>pi :PlugInstall<CR>
 nnoremap <silent><Leader>pc :PlugClear<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
 nnoremap <silent><Leader>qq :q<CR>
+nnoremap <silent><Leader>wq :wq<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
@@ -102,7 +107,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Ag configuration
 let g:ag_highlight=1
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 " Vim-ruby config
@@ -126,3 +130,15 @@ highlight SyntasticError guibg=#2f0000
 " CtrlP
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_root_markers = ['Gemfile']
+
+" Hardmode config
+nnoremap <leader>hm <Esc>:call ToggleHardMode()<CR>
+
+set wildignore+=*.swp,*~,._*,*/tmp/*,.DS_Store
+
+" RSpec.vim mappings
+let g:rspec_runner = "os_x_iterm2"
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
