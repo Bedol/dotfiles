@@ -86,4 +86,17 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
-alias vim='nvim'
+
+
+# Aliases
+alias vim='nvim' # use neovim
+alias g='git'
+alias gs='git status -sb'
+alias b='bundle'
+alias bi='budnle install'
+alias be='bundle exec'
+
+# aliases to edit config files
+alias vimrc='vim ~/.config/neovim/init.vim'
+
+
