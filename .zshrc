@@ -90,6 +90,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Aliases
 alias vim='nvim' # use neovim
+alias mkdir='mkdir -p'
 alias g='git'
 alias gs='git status -sb'
 alias b='bundle'
