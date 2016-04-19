@@ -83,7 +83,7 @@ nnoremap <silent><Leader>qq :q<CR>
 nnoremap <silent><Leader>wq :wq<CR>
 
 " open neovim config
-nnoremap <silent><C-i>n :e ~/projects/dotfiles/.config/nvim/init.vim<CR>
+nnoremap <silent><C-i>n :e ~/.config/nvim/init.vim<CR>
 
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
