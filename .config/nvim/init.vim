@@ -20,7 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'edkolev/tmuxline.vim'
     Plug 'simnalamburt/vim-mundo', { 'on': 'MundoToggle' }
     Plug 'tpope/vim-bundler'
-    Plug 'ervandew/supertab'
+    Plug 'valloric/youcompleteme'
     Plug 'unblevable/quick-scope'
     Plug 'christophermca/meta5'
     Plug 'tpope/vim-rails'
@@ -148,3 +148,7 @@ map <Leader>rt :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
+
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
