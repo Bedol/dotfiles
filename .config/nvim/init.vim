@@ -152,3 +152,7 @@ map <Leader>ra :call RunAllSpecs()<CR>
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+" Draw limit line
+let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(400,999),",")
