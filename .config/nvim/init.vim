@@ -77,7 +77,7 @@ inoremap <Right> <NOP>
 nnoremap <silent><Leader>/ :nohls<CR>
 nnoremap <silent><C-s> :w<CR>
 nnoremap <silent><Leader>pi :PlugInstall<CR>
-nnoremap <silent><Leader>pc :PlugClear<CR>
+nnoremap <silent><Leader>pc :PlugClean<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
 nnoremap <silent><Leader>qq :q<CR>
 nnoremap <silent><Leader>wq :wq<CR>
