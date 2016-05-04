@@ -28,6 +28,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'thoughtbot/vim-rspec'
     Plug 'mattn/emmet-vim'
     Plug 'bronson/vim-trailing-whitespace'
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    Plug 'garbas/vim-snipmate'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
