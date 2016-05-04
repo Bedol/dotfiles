@@ -37,7 +37,7 @@ let mapleader = "," " change standard leader '\' to ','
 
 syntax enable
 set background=dark
-colorscheme badwolf
+colorscheme molokai
 let g:molokai_original = 1
 
 " Basic configuration
@@ -82,7 +82,7 @@ nnoremap <silent><C-s> :w<CR>
 nnoremap <silent><Leader>pi :PlugInstall<CR>
 nnoremap <silent><Leader>pc :PlugClean<CR>
 nnoremap <silent><Leader>gs :Gstatus<CR>
-nnoremap <silent><Leader>qq :q<CR>
+nnoremap <silent><Leader>qq :q!<CR>
 nnoremap <silent><Leader>wq :wq<CR>
 
 "Better movement on split panes
@@ -139,6 +139,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_auto_loc_list=1
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
 highlight SyntasticError guibg=#2f0000
 
 " CtrlP
