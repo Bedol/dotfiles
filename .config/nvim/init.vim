@@ -134,7 +134,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Ag configuration
-let g:ag_highlight=0
+let g:ag_highlight=0 " turn off Ag Hightlight
 let g:ctrlp_use_caching = 0
 
 " Vim-ruby config
@@ -146,19 +146,23 @@ set undofile
 set undodir=~/.config/nvim/undo
 
 " Syntastic config
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1 " Check syntax when open file
+let g:syntastic_check_on_wq = 1 " Check syntax when save and quit file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_enable_signs=1 " Mark syntax error with signs
+let g:syntastic_auto_jump=0 " turn off auto jump to error
+let g:syntastic_auto_loc_list=1 " show error list automatically
 highlight SyntasticError guibg=#2f0000
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'rw'
-let g:ctrlp_root_markers = ['Gemfile']
-let g:ctrlp_show_hidden = 1
+let g:ctrlp_root_markers = ['Gemfile'] " use Gemfile as root maker
+let g:ctrlp_show_hidden = 1 " Show hidden files (dotfiles)
 
 " Hardmode config
 nnoremap <leader>hm <Esc>:call ToggleHardMode()<CR>
