@@ -86,10 +86,17 @@ nnoremap <silent><Leader>gd :Gdiff<CR>
 nnoremap <silent><Leader>gc :Gcommit<CR>
 nnoremap <silent><Leader>gp :Gpush<CR>
 
+" turn off highlight
 nnoremap <silent><Leader>/ :nohls<CR>
+
+" Vim Plug mapping
 nnoremap <silent><Leader>pi :PlugInstall<CR>
 nnoremap <silent><Leader>pc :PlugClean<CR>
-nnoremap <silent><Leader>qq :q<CR>
+
+" fast quit
+nnoremap <silent><Leader>qq :q!<CR>
+
+" save file and quit
 nnoremap <silent><Leader>wq :wq<CR>
 
 "Better movement on split panes
@@ -169,6 +176,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-" Draw limit line
+" Draw limit line - 80 chars per line
 let &colorcolumn=join(range(81,999),",")
 let &colorcolumn="80,".join(range(400,999),",")
