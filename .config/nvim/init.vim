@@ -39,7 +39,7 @@ let mapleader = "," " change standard leader '\' to ','
 syntax enable
 set background=dark
 set encoding=utf-8
-colorscheme badwolf
+colorscheme molokai
 let g:molokai_original = 1
 
 " Soft tabs - 2 spaces
