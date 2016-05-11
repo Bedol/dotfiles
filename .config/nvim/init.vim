@@ -35,13 +35,21 @@ call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
 
+" Color Scheme
 syntax enable
 set background=dark
-colorscheme molokai
+set encoding=utf-8
+colorscheme badwolf
 let g:molokai_original = 1
 
+" Soft tabs - 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set smarttab
+
 " Basic configuration
-set encoding=utf-8
 set history=1000
 set cursorline
 set wildmenu
@@ -53,11 +61,6 @@ set number
 set relativenumber
 set autoindent
 set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set tabstop=2
 
 " quick esc
 inoremap jk <ESC>
@@ -77,12 +80,26 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-nnoremap <silent><Leader>/ :nohls<CR>
+" Fast save file
 nnoremap <silent><C-s> :w<CR>
+
+" Git commands
+nnoremap <silent><Leader>gs :Gstatus<CR>
+nnoremap <silent><Leader>gd :Gdiff<CR>
+nnoremap <silent><Leader>gc :Gcommit<CR>
+nnoremap <silent><Leader>gp :Gpush<CR>
+
+" turn off highlight
+nnoremap <silent><Leader>/ :nohls<CR>
+
+" Vim Plug mapping
 nnoremap <silent><Leader>pi :PlugInstall<CR>
 nnoremap <silent><Leader>pc :PlugClean<CR>
-nnoremap <silent><Leader>gs :Gstatus<CR>
+
+" fast quit
 nnoremap <silent><Leader>qq :q!<CR>
+
+" save file and quit
 nnoremap <silent><Leader>wq :wq<CR>
 
 "Better movement on split panes
@@ -120,7 +137,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Ag configuration
-let g:ag_highlight=1
+let g:ag_highlight=0 " turn off Ag Hightlight
 let g:ctrlp_use_caching = 0
 
 " Vim-ruby config
@@ -132,22 +149,23 @@ set undofile
 set undodir=~/.config/nvim/undo
 
 " Syntastic config
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1 " Check syntax when open file
+let g:syntastic_check_on_wq = 1 " Check syntax when save and quit file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=0
-let g:syntastic_auto_loc_list=1
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_enable_signs=1 " Mark syntax error with signs
+let g:syntastic_auto_jump=0 " turn off auto jump to error
+let g:syntastic_auto_loc_list=1 " show error list automatically
 highlight SyntasticError guibg=#2f0000
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'rw'
-let g:ctrlp_root_markers = ['Gemfile']
+let g:ctrlp_root_markers = ['Gemfile'] " use Gemfile as root maker
+let g:ctrlp_show_hidden = 1 " Show hidden files (dotfiles)
 
 " Hardmode config
 nnoremap <leader>hm <Esc>:call ToggleHardMode()<CR>
@@ -156,7 +174,6 @@ set wildignore+=*.swp,*~,._*,*/tmp/*,.DS_Store
 
 " RSpec.vim mappings
 let g:rspec_runner = "os_x_iterm2"
-
 map <Leader>rt :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
@@ -166,7 +183,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-" Draw limit line
+" Draw limit line - 80 chars per line
 let &colorcolumn=join(range(81,999),",")
 let &colorcolumn="80,".join(range(400,999),",")
 
