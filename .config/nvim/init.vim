@@ -28,9 +28,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'thoughtbot/vim-rspec'
     Plug 'mattn/emmet-vim'
     Plug 'bronson/vim-trailing-whitespace'
-    "Plug 'MarcWeber/vim-addon-mw-utils'
-    "Plug 'tomtom/tlib_vim'
-    "Plug 'garbas/vim-snipmate'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'ervandew/supertab'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
@@ -111,6 +111,9 @@ nnoremap <C-l> <C-w>l
 " open neovim config
 nnoremap <silent><C-i>n :e ~/.config/nvim/init.vim<CR>
 
+" close current buffer
+nnoremap <silent><Leader>dd :bd<CR>
+
 " NERDTree Configuration
 map <C-e> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
@@ -189,3 +192,16 @@ let &colorcolumn="80,".join(range(400,999),",")
 
 " Exstra space on comments (NERDCommenter)
 let NERDSpaceDelims=1
+
+" Directory for snippets
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
