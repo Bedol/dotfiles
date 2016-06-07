@@ -206,3 +206,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Change cursor shape in insert mode
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
