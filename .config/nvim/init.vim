@@ -33,7 +33,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'ervandew/supertab'
 call plug#end()
 
-let mapleader = "," " change standard leader '\' to ','
+let mapleader = "\<Space>" " change standard leader '\' to 'space'
 
 " Color Scheme
 syntax enable
