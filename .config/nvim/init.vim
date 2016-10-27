@@ -152,6 +152,7 @@ let g:ctrlp_use_caching = 0
 
 " Vim-ruby config
 let g:ruby_indent_access_modifier_style = 'outdent'
+let ruby_foldable_groups = 'if case %'
 
 " Vim-Mundo config (fork Gundo for neovim) - WARNING: don't work with neovim 0.1.2
 nnoremap <leader>u :MundoToggle<CR>
@@ -166,7 +167,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_ruby_checkers=['rubocop', 'reek']
 let g:syntastic_enable_signs=1 " Mark syntax error with signs
 let g:syntastic_auto_jump=0 " turn off auto jump to error
 let g:syntastic_auto_loc_list=1 " show error list automatically
@@ -214,6 +215,9 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Change cursor shape in insert mode
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 map gn :bn<CR>
 map gp :bp<CR>
