@@ -31,9 +31,16 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'ervandew/supertab'
+    " Plug 'neomake/neomake'
+    Plug 'godlygeek/tabular'
 call plug#end()
 
 let mapleader = "," " change standard leader '\' to ','
+
+" Spell
+" nnoremap <sllent> <leader>s :set spell!<CR>
+set spell
+set spelllang=en_us
 
 " Color Scheme
 syntax enable
@@ -152,7 +159,7 @@ set undofile
 set undodir=~/.config/nvim/undo
 
 " Syntastic config
-let g:syntastic_check_on_open = 1 " Check syntax when open file
+" let g:syntastic_check_on_open = 1 " Check syntax when open file
 let g:syntastic_check_on_wq = 1 " Check syntax when save and quit file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -192,6 +199,8 @@ let &colorcolumn="80,".join(range(400,999),",")
 
 " Exstra space on comments (NERDCommenter)
 let NERDSpaceDelims=1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
 " Directory for snippets
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
@@ -205,3 +214,10 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+map gn :bn<CR>
+map gp :bp<CR>
+map gd :bd<CR>
+
+" let g:neomake_ruby_enabled_makers = ['rubocop']
+" nnoremap <silent><Leader>mk :Neomake<CR>
