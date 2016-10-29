@@ -6,7 +6,7 @@ export ZSH=/Users/bweber/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # Favorite themes: "honukai"
-ZSH_THEME="honukai"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +54,7 @@ plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,12 +87,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
+DEFAULT_USER="bweber"
 
 # Aliases
 alias vim='nvim' # use neovim
 alias mkdir='mkdir -p'
 alias g='git'
-alias gs='git status -sb'
+# alias gs='git status -sb'
 alias b='bundle'
 alias bi='budnle install'
 alias be='bundle exec'
@@ -100,4 +101,12 @@ alias be='bundle exec'
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
 
-
+alias ici="irb -r config/init"
+alias gd="git diff"
+alias bi="bundle install"
+alias rs="rails server"
+alias rc="rails console"
+alias vim="nvim"
+alias rcop='rubocop -RD'
+alias weather='curl wttr.in/Gdańsk'
+alias reload_db='rails db:drop && rm db/schema.rb && rake db:create db:migrate db:seed_fu'
