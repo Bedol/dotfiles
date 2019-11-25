@@ -50,7 +50,7 @@ ZSH_THEME="honukai"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting osx)
 
 # User configuration
 
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/Library/Android/sdk/tools/bin" # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
 
@@ -96,6 +96,7 @@ alias gs='git status -sb'
 alias b='bundle'
 alias bi='budnle install'
 alias be='bundle exec'
+alias buuc='brew update && brew upgrade && brew cleanup'
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
