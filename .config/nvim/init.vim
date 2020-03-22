@@ -32,9 +32,16 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'ervandew/supertab'
     Plug 'jwalton512/vim-blade'
+    " Plug 'neomake/neomake'
+    Plug 'godlygeek/tabular'
 call plug#end()
 
 let mapleader = "\<Space>" " change standard leader '\' to 'space'
+
+" Spell
+" nnoremap <sllent> <leader>s :set spell!<CR>
+set spell
+set spelllang=en_us
 
 " Color Scheme
 syntax enable
@@ -155,7 +162,7 @@ set undodir=~/.config/nvim/undo
 
 " Syntastic config
 " let g:syntastic_check_on_open = 1 " Check syntax when open file
-" let g:syntastic_check_on_wq = 1 " Check syntax when save and quit file
+let g:syntastic_check_on_wq = 1 " Check syntax when save and quit file
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -194,6 +201,8 @@ let &colorcolumn="120,".join(range(400,999),",")
 
 " Exstra space on comments (NERDCommenter)
 let NERDSpaceDelims=1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
 " Directory for snippets
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
