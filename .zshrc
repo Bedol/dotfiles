@@ -5,8 +5,8 @@ export ZSH=/Users/bweber/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# Favorite themes: "honukai"
-ZSH_THEME="honukai"
+# Favorite themes: honukai, agnoster, spaceship
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,7 +50,7 @@ ZSH_THEME="honukai"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting osx)
+plugins=(git zsh-syntax-highlighting osx brew bundler capistrano command-not-found docker docker-compose tnux)
 
 # User configuration
 
@@ -90,15 +90,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Aliases
 alias vim='nvim' # use neovim
-alias mkdir='mkdir -p'
-alias g='git'
-alias gs='git status -sb'
-alias b='bundle'
-alias bi='budnle install'
-alias be='bundle exec'
-alias buuc='brew update && brew upgrade && brew cleanup'
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
-
 
