@@ -6,16 +6,21 @@ Added dotfiles:
 * Tmux
 * Spacevim
 
-Unix Shell:
+### Unix Shell:
  * zsh
  * [Oh My ZSH!](https://ohmyz.sh/) 
 
-Fonts:
+### Fonts:
 [nerd-font](https://github.com/ryanoasis/nerd-fonts)
 [SauceCodePro Nerd Font Mono](https://spacevim.org/documentation/#font)
 
-ZSH Dependencies:
+### ZSH Dependencies:
 [Spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt)
 
-VIM:
+Install zsh-autosuggestions
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+### VIM:
 [Spacevim](https://spacevim.org/)
