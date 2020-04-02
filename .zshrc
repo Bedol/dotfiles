@@ -5,8 +5,8 @@ export ZSH=/Users/bweber/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# Favorite themes: "honukai"
-ZSH_THEME="agnoster"
+# Favorite themes: honukai, agnoster, spaceship
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,7 +50,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting osx brew bundler capistrano colored-man-pages zsh-autosuggestions command-not-found docker docker-compose tmux)
 
 # User configuration
 
@@ -60,7 +60,10 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:$
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export EDITOR="nvim"
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -84,29 +87,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/Library/Android/sdk/tools/bin" # Add RVM to PATH for scripting
 export PATH=/usr/local/bin:$PATH
 
 DEFAULT_USER="bweber"
 
 # Aliases
 alias vim='nvim' # use neovim
-alias mkdir='mkdir -p'
-alias g='git'
-# alias gs='git status -sb'
-alias b='bundle'
-alias bi='budnle install'
-alias be='bundle exec'
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
-
-alias ici="irb -r config/init"
-alias gd="git diff"
-alias bi="bundle install"
-alias rs="rails server"
-alias rc="rails console"
-alias vim="nvim"
-alias rcop='rubocop -RD'
-alias weather='curl wttr.in/Gdańsk'
-alias reload_db='rails db:drop && rm db/schema.rb && rake db:create db:migrate db:seed_fu'

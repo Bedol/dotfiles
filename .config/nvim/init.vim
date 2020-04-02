@@ -31,11 +31,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'ervandew/supertab'
+    Plug 'jwalton512/vim-blade'
     " Plug 'neomake/neomake'
     Plug 'godlygeek/tabular'
 call plug#end()
 
-let mapleader = "," " change standard leader '\' to ','
+let mapleader = "\<Space>" " change standard leader '\' to 'space'
 
 " Spell
 " nnoremap <sllent> <leader>s :set spell!<CR>
@@ -194,9 +195,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
-" Draw limit line - 80 chars per line
+" Draw limit line - 120 chars per line
 let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="80,".join(range(400,999),",")
+let &colorcolumn="120,".join(range(400,999),",")
 
 " Exstra space on comments (NERDCommenter)
 let NERDSpaceDelims=1
@@ -219,9 +220,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " Change cursor shape in insert mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
-map gn :bn<CR>
-map gp :bp<CR>
-map gd :bd<CR>
+nnoremap gd :bd<CR>
+nnoremap gp :bp<CR>
+nnoremap gn :bn<CR>
 
-" let g:neomake_ruby_enabled_makers = ['rubocop']
-" nnoremap <silent><Leader>mk :Neomake<CR>
+let g:NERDDefaultAlign = 'left'
