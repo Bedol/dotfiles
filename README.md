@@ -4,6 +4,7 @@ Added dotfiles:
 * NeoVim
 * ZSH
 * Tmux
+* Tmuxinator
 * Spacevim
 
 ### Unix Shell:
@@ -24,3 +25,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 ### VIM:
 [Spacevim](https://spacevim.org/)
+
+
+### Tmuxinator
+```bash
+brew install tmuxinator
+```
