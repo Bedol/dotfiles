@@ -93,6 +93,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Aliases
 alias vim='nvim' # use neovim
+alias txst='tmuxinator stop' # stop tmuxinator project
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
