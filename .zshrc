@@ -94,6 +94,8 @@ export PATH=/usr/local/bin:$PATH
 # Aliases
 alias vim='nvim' # use neovim
 alias txst='tmuxinator stop' # stop tmuxinator project
+alias rspec='nocorrect rspec' # disable autocorrect for rspec command
+alias docker-compose='nocorrect docker-compose' # disable autocorrect for docker-compose command
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
