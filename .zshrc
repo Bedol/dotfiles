@@ -100,3 +100,5 @@ alias docker-compose='nocorrect docker-compose' # disable autocorrect for docker
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
