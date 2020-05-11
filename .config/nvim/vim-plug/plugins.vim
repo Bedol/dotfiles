@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/NERDTree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'scrooloose/nerdcommenter'
     Plug 'easymotion/vim-easymotion'
     Plug 'jiangmiao/auto-pairs'
     Plug 'morhetz/gruvbox'
@@ -31,4 +32,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-endwise'
     Plug 'mattn/emmet-vim'
+    Plug 'bagrat/vim-buffet'
+    Plug 'bronson/vim-trailing-whitespace'
+    Plug 'simnalamburt/vim-mundo', { 'on': 'MundoToggle' }
+    Plug 'edkolev/tmuxline.vim'
+    Plug 'unblevable/quick-scope'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'wikitopian/hardmode'
+    " Plug 'thoughtbot/vim-rspec'
 call plug#end()
+
+" For quick install plugins:
+" :source %
+" :PlugInstall

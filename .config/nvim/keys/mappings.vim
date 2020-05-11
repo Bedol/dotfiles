@@ -16,10 +16,10 @@ inoremap kj <Esc>
 " inoremap <c-u> <ESC>viwUi
 " nnoremap <c-u> viwU<Esc>
 
-" TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
+" [SPACE]bn in general mode will move to text buffer
+nnoremap <leader>bn :bnext<CR>
+" [SPACE]bp will go back
+nnoremap <leader>bp :bprevious<CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
