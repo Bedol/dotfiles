@@ -38,6 +38,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'edkolev/tmuxline.vim'
     Plug 'unblevable/quick-scope'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'liuchengxu/vim-which-key'
     " Plug 'wikitopian/hardmode'
     " Plug 'thoughtbot/vim-rspec'
 call plug#end()

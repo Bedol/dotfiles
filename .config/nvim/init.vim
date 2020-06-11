@@ -8,4 +8,5 @@ source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/quick_scope.vim
 source $HOME/.config/nvim/plugins/mundo.vim
 source $HOME/.config/nvim/plugins/startify.vim
+source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
