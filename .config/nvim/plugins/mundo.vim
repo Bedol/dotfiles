@@ -1,4 +1,4 @@
-nnoremap <F5> :MundoToggle<CR>
+" nnoremap <F5> :MundoToggle<CR>
 
 let g:mundo_width = 50
 let g:mundo_preview_height = 40

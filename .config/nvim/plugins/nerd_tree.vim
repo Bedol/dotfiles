@@ -1,5 +1,5 @@
 " NERDTree Configuration
-map <leader>ft :NERDTreeToggle<CR>
+" map <space>fn :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeHighlightCursorline = 1

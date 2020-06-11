@@ -17,9 +17,9 @@ inoremap kj <Esc>
 " nnoremap <c-u> viwU<Esc>
 
 " [SPACE]bn in general mode will move to text buffer
-nnoremap <leader>bn :bnext<CR>
+" nnoremap <leader>bn :bnext<CR>
 " [SPACE]bp will go back
-nnoremap <leader>bp :bprevious<CR>
+" nnoremap <leader>bp :bprevious<CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
