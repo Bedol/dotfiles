@@ -50,7 +50,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting osx brew bundler capistrano colored-man-pages zsh-autosuggestions command-not-found docker docker-compose tmux)
+plugins=(git zsh-syntax-highlighting osx brew bundler capistrano colored-man-pages zsh-autosuggestions command-not-found docker docker-compose tmux tmuxinator)
 
 # User configuration
 
@@ -94,6 +94,9 @@ DEFAULT_USER="bweber"
 
 # Aliases
 alias vim='nvim' # use neovim
+alias txst='tmuxinator stop' # stop tmuxinator project
+alias rspec='nocorrect rspec' # disable autocorrect for rspec command
+alias docker-compose='nocorrect docker-compose' # disable autocorrect for docker-compose command
 
 # aliases to edit config files
 alias vimrc='vim ~/.config/neovim/init.vim'
