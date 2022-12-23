@@ -23,4 +23,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ```
 
 ### VIM:
-[Spacevim](https://spacevim.org/)
+```bash
+brew install neovim
+```
