@@ -1,0 +1,13 @@
+[user]
+	name = Bartłomiej Weber
+	email = bartlomiej.weber@gmail.com
+[core]
+	editor = nvim
+[fetch]
+	prune = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
