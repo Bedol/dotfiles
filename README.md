@@ -39,10 +39,25 @@ chezmoi apply ~/.tmux.conf
  ```
 
 ### Fonts:
-[nerd-font](https://github.com/ryanoasis/nerd-fonts)
+Download a `SauceCodePro` font from [https://www.nerdfonts.com/](Nerd Font page).
 
-[SauceCodePro Nerd Font Mono](https://spacevim.org/documentation/#font)
+Then we need to unzip files.
+```bash
+unzip SauceCodePro.zip -d SauceCodePro
+```
+The next step is copy `*.ttf` fonts into folder where we have fonts.
 
+On the Linux:
+```bash
+cd SauceCodePro
+cp -vf *.ttf ~/.local/share/fonts
+```
+
+On the macOS:
+```bash
+cd SauceCodePro
+cp -vf *.ttf ~/Library/Fonts
+```
 
 ## macOS
 ### homebrew updates & cleanup
