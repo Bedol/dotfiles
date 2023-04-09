@@ -3,6 +3,7 @@
 	email = bartlomiej.weber@gmail.com
 [core]
 	editor = nvim
+	excludesfile = ~/.gitignore
 [fetch]
 	prune = true
 [alias]
