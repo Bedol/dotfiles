@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# RBENV settings
+eval "$(rbenv init - zsh)"
+export PATH=$HOME/.rbenv/shims:$PATH
+
 export EDITOR="nvim"
 alias vim=$EDITOR
 alias vi=$EDITOR
