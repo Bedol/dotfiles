@@ -32,7 +32,7 @@ format = 'via [🤖 $version](bold green) '
 
 [git_branch]
 symbol = '🌱 '
-truncation_length = 4
+# truncation_length = 4
 truncation_symbol = ''
 ignore_branches = ['master', 'main']
 
