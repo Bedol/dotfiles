@@ -1,6 +1,9 @@
-opacity = 0.4
+[window]
+opacity = 0.85
 startup_mode = "Maximized"
 title = "Alacritty"
+dynamic_title = true
+# option_as_alt = "RightOnly" # MacOS only
 
 [font]
 size = 12.0
