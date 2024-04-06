@@ -105,7 +105,7 @@ if ! type starship > /dev/null; then
 fi
 
 # RBENV settings
-eval "$(rbenv init - zsh)"
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
 export PATH=$HOME/.rbenv/shims:$PATH
 
 export EDITOR="nvim"
